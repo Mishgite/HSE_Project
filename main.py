@@ -91,7 +91,7 @@ plt.xlabel('Страны')
 plt.ylabel('Стоимость всех миссии: в миллионах долларов')
 
 ax4 = fig.add_subplot(212)
-ax4.bar(years_flie.keys(), years_flie.values())
+ax4.plot(years_flie.keys(), years_flie.values())
 
 for i, v in enumerate(years_flie.values()):
     ax4.text(i, v, str(v), ha='center', va='bottom', fontsize=8)
