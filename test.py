@@ -2,6 +2,7 @@ import pandas as pd
 
 
 df = pd.read_csv("Space_Corrected.csv")
+pd.set_option('display.max_rows', None)
 
 country_counts1 = df["Location"].value_counts()
 print("Количество запусков на разных космодромах:\n", country_counts1)
@@ -23,4 +24,3 @@ print("\nПроцент успешности миссий в разных стр
 
 launch_success_by_company = df.groupby("Company Name")["Status Rocket"].value_counts(normalize=True) * 100
 print("\nПроцент успешности запусков по компаниям:\n", launch_success_by_company)
-

@@ -89,12 +89,15 @@ plt.xticks(rotation=80)
 
 plt.xlabel('Страны')
 plt.ylabel('Стоимость всех миссии: в миллионах долларов')
+plt.tight_layout()
 
-ax4 = fig.add_subplot(212)
-ax4.plot(years_flie.keys(), years_flie.values())
+plt.show()
+fig = plt.figure()
+ax4 = fig.add_subplot(111)
+ax4.plot(years_flie.values(), years_flie.keys())
 
 for i, v in enumerate(years_flie.values()):
-    ax4.text(i, v, str(v), ha='center', va='bottom', fontsize=8)
+    ax4.text(v, i, str(v), ha='center', va='bottom', fontsize=7)
 
 plt.xticks(rotation=80)
 
