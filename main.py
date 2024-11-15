@@ -94,7 +94,7 @@ plt.tight_layout()
 plt.show()
 fig = plt.figure()
 ax4 = fig.add_subplot(111)
-ax4.plot(years_flie.values(), years_flie.keys())
+ax4.plot(years_flie.keys(), years_flie.values())
 
 for i, v in enumerate(years_flie.values()):
     ax4.text(i, v, str(v), ha='center', va='bottom', fontsize=7)
