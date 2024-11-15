@@ -97,7 +97,7 @@ ax4 = fig.add_subplot(111)
 ax4.plot(years_flie.values(), years_flie.keys())
 
 for i, v in enumerate(years_flie.values()):
-    ax4.text(v, i, str(v), ha='center', va='bottom', fontsize=7)
+    ax4.text(i, v, str(v), ha='center', va='bottom', fontsize=7)
 
 plt.xticks(rotation=80)
 
